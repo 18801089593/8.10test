@@ -1,7 +1,70 @@
-import unittest
-import time
+
 from appium import webdriver
 from common.Driver import Driver
+
+from common.MyTest import MyTest
+from appium import webdriver
+import time,unittest
+from po.HomePage import HomePage
+from common.Public import Operation
+
+
+class HomeTest(MyTest):
+
+
+    def test_click(self):
+        driver.find_element_by_id("com.ss.android.article.news:id/a9z").clear()
+        print("clear")
+        driver.find_element_by_id("com.ss.android.article.news:id/m0").clear()
+        print("clear2")
+        # 输入想要搜索的内容
+        driver.find_element_by_id("com.ss.android.article.news:id/m0").send_keys("ABCDE")
+        print("send_keys")
+        # 点击搜索按钮
+        driver.find_element_by_id("com.ss.android.article.news:id/ok").click()
+        print("click")
+
+    def test_swipe(self):
+        driver.find_element_by_xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.TabHost/android.widget.RelativeLayout[1]/android.widget.TabWidget/android.widget.RelativeLayout[4]/android.widget.ImageView").click()
+        print("click")
+        driver.find_element_by_id("com.ss.android.article.news:id/adu").click()
+        print("click2")
+        driver.find_element_by_id("com.ss.android.article.news:id/h3").send_keys("12345678901")
+        print("send_keys")
+
+
+
+if __name__ == '__main__':
+    unittest.main()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class HomeTest(unittest.TestCase):
      # def setUpClass(cls):

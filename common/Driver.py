@@ -1,9 +1,9 @@
 #引入appium包
 
 from appium import webdriver
-import time
+import time,os
 
-class Driver():
+class Driver(object):
     def startup(self):
         desired_caps = {
             "platformName": "Android",
@@ -18,20 +18,11 @@ class Driver():
 
         self.driver = webdriver.Remote('http://127.0.0.1:4723/wd/hub', desired_capabilities=desired_caps)
 
+        time.sleep(6)
         return self.driver
 
+
+# if __name__ == '__main__':
 Driver().startup()
-
-
-
-
-
-
-
-
-
-
-
-
 
 
