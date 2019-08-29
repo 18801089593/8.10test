@@ -12,7 +12,7 @@ from common.Public import Operation
 class HomeTest(MyTest):
 
 
-    def test_click(self):
+    def test_one(self):
         driver.find_element_by_id("com.ss.android.article.news:id/a9z").clear()
         print("clear")
         driver.find_element_by_id("com.ss.android.article.news:id/m0").clear()
@@ -24,7 +24,7 @@ class HomeTest(MyTest):
         driver.find_element_by_id("com.ss.android.article.news:id/ok").click()
         print("click")
 
-    def test_swipe(self):
+    def test_two(self):
         driver.find_element_by_xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.TabHost/android.widget.RelativeLayout[1]/android.widget.TabWidget/android.widget.RelativeLayout[4]/android.widget.ImageView").click()
         print("click")
         driver.find_element_by_id("com.ss.android.article.news:id/adu").click()
@@ -32,6 +32,14 @@ class HomeTest(MyTest):
         driver.find_element_by_id("com.ss.android.article.news:id/h3").send_keys("12345678901")
         print("send_keys")
 
+
+    def test_three(self):
+        driver.find_element_by_xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.TabHost/android.widget.RelativeLayout[1]/android.widget.TabWidget/android.widget.RelativeLayout[4]/android.widget.ImageView").click()
+        print("click")
+
+    def test_fore(self):
+        driver.find_element_by_xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.TabHost/android.widget.RelativeLayout[1]/android.widget.TabWidget/android.widget.RelativeLayout[4]/android.widget.ImageView").click()
+        print("click")
 
 
 if __name__ == '__main__':
