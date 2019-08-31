@@ -15,15 +15,22 @@ class HomePage():
 
 
     #封装页面元素属性
-    search_page = (By.ID, 'com.ks.kaishustory:id/icon_tosearch')        # 搜索页
+    search_page = (By.ID, 'com.ss.android.article.news:id/a9z')        # 搜索页
 
     #封装页面元素的操作方法
     def clickSearch(self):
-        time.sleep(5)
-        self.driver.find_element(*self.search_page).click()
-        print('点击完成')
-        time.sleep(10)
+
+        self.driver.find_element(*self.search_page).clear()
+        time.sleep(2)
+        print("clear")
+        self.driver.find_element_by_id("com.ss.android.article.news:id/m0").clear()
+        print("clear2")
+        time.sleep(2)
         return self.driver
+
+        # print('点击完成')
+        # time.sleep(10)
+        # return self.driver
 
 
 

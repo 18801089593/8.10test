@@ -1,18 +1,24 @@
 # coding:utf-8
-from common.MyTest import MyTest
 
+
+from common.MyTest import MyTest
+from appium import webdriver
 import time,unittest
 from po.HomePage import HomePage
 from common.Public import Operation
 
-
 class HomeTest(MyTest):
 
 
-    # def test_one(self):
+    def test_one(self):
+
+        h = HomePage(self.driver)
+        h.find_element_by_id("com.ss.android.article.news:id/m0").send_keys("ABCDE")
+        print('执行用例哈哈哈哈')
+        # print("send_keys")
 
         # 清除搜索输入框
-        # driver = webdriver.Remote('http://127.0.0.1:4723/wd/hub',desired_capabilities=desired_caps)
+        # #driver = webdriver.Remote('http://127.0.0.1:4723/wd/hub',desired_capabilities=desired_caps)
         # driver.find_element_by_id("com.ss.android.article.news:id/a9z").clear()
         # print("clear")
         # time.sleep(3)
@@ -37,10 +43,14 @@ class HomeTest(MyTest):
     #     print("send_keys2")
 
 
-    def test_click(self):
-        print('run hometest')
-        h = HomePage(self.driver)
-        print('点击搜索')
+    #def test_click(self):
+
+
+
+
+        # print('run hometest')
+        # h = HomePage(self.driver)
+        # print('点击搜索')
         # h.clickSearch()
         # self.assertEqual(1,1)
 
