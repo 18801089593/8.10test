@@ -52,35 +52,6 @@ class HomeTest(MyTest):
 if __name__ == '__main__':
     unittest.main()
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # class HomeTest(unittest.TestCase):
 #      # def setUpClass(cls):
 #      #     print('AAAAAA')

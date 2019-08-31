@@ -35,3 +35,6 @@ class ReadConfig(object):
     def get_db(self, name):
         value = self.cf.get("DATABASE", name)
         return value
+
+a = ReadConfig()
+#print(a.get_email('content'))

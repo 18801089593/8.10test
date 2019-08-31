@@ -8,7 +8,7 @@
 '''
 
 
-import smtplib,os,time
+import smtplib,os
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from readConfig import ReadConfig
@@ -56,7 +56,7 @@ class ConfigEmail():
         #查找最新文件
         current_path = os.path.dirname(os.path.abspath(__file__))
         # print('current',current_path)
-        filePath = os.path.dirname(current_path) + "/" + 'report'
+        filePath = os.path.dirname(current_path) + "/" + 'testreport'
         # print('filepath',filePath)
 
         fileList = os.listdir(filePath)
@@ -95,5 +95,5 @@ class ConfigEmail():
 #
 # if __name__ == '__main__':
 # #     pass
-c = ConfigEmail()
-c.send_mail()
+# c = ConfigEmail()
+# c.send_mail()

@@ -5,7 +5,7 @@ from common.Driver import Driver
 from common.MyTest import MyTest
 
 
-class HomePage(Driver):
+class HomePage():
 
 
 
