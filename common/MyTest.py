@@ -1,11 +1,12 @@
 import unittest
 from common.Driver import Driver
-from testcase.HomeTest import HomeTest
+
+
 class MyTest(unittest.TestCase):
 
 
     @classmethod
-    def setupClass(cls):                 #当前测试类中所有test开头的用例前执行一次
+    def setUpClass(cls):                 #当前测试类中所有test开头的用例前执行一次
         print('执行初始化类方法')
         d = Driver()
         cls.driver = d.startup()
@@ -13,6 +14,7 @@ class MyTest(unittest.TestCase):
     def setUp(self):                     #当前测试类中每一个test开头的用例前执行一次
         print('执行初始化方法')
         self.driver.launch_app()
+
 
     def tearDown(self):
         print('执行清理方法')

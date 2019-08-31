@@ -1,6 +1,6 @@
 import os
 from common.Driver import Driver
-from common import readConfig
+
 import time
 
 
